@@ -1,0 +1,77 @@
+<!--<section class="property-binding">
+  parte1
+    <article>
+    <h3>Interpolação</h3>
+    <p>{{ url }}</p>
+    <p>A o resultado de 2 + 2 é {{ 2 + 2 }}</p>
+    <p>O resultado de 2 + 2 não é {{ 1 + 1 + getValor() }}</p>
+    <p>Curso legal: {{ cursoAngular && !getCurtirCurso() }}</p>
+  </article>
+
+  <article>
+    <h3>Imagens</h3>
+    <img src="{{ urlImagem }}"> 
+    <img [src] = "urlImagem"> 
+  </article>
+  
+  parte 2
+    <article>
+    <h3>Class e Style</h3>
+    <div>
+      <p>Selecione uma clase</p> 
+      <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Infor</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+      </select>
+      <br><br>
+      <div class="alert {{ classe.value }}">
+        Texto colorido!
+      </div>
+      <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'"> Sucesso</div>
+      <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">Infor</div>
+      <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Alerta</div>
+      <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Erro</div>
+      <div class="alert alert-danger" role="alert"
+      [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+        Esse texto Sair um pouco
+      </div>
+    </div>
+  </article>
+</section>-->
+<!--<section class="event-binding">
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button (click)="botaoClicado()"  class="btn btn-primary">click!</button>
+      <br><br>
+      <input type="text" (keyup)="onKeyup($event)" (keyup.enter)="salvarValor(campoInput.value)"
+       (blur)="salvarValor(campoInput.value)" #campoInput>
+      <p>{{ valorAtual }}</p>
+      <p>{{ valorSalvo }}</p>
+      <span (mouseover)="mouseOutAlt()" (mouseout)="mouseOutAlt()" [class.luz] =  "ismouseOver == true">Passe o maouse em mim</span>
+
+    </div>
+  </article>
+</section>-->
+<section>
+  <article>
+    <h3>two-way-data binding</h3>
+    <div>
+
+      <input type="text" [value]="nome" (input)="nome = $event.target.value">
+      <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event">
+      <input type="text" [(ngModel)]="nome">
+      <p>vc escreve o nome: {{ nome }}</p>
+
+      <div>
+        <input type="text" [(ngModel)]="pessoa.nome">
+        <input type="text" [(ngModel)]="pessoa.idade">
+        <p>Hi, my name is {{ pessoa.nome}}, I old {{pessoa.idade}}</p>
+      </div>
+
+
+    </div>
+  </article>
+</section>
