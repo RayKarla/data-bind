@@ -54,7 +54,8 @@
 
     </div>
   </article>
-</section>-->
+</section>
+parte 3
 <section>
   <article>
     <h3>two-way-data binding</h3>
@@ -71,7 +72,15 @@
         <p>Hi, my name is {{ pessoa.nome}}, I old {{pessoa.idade}}</p>
       </div>
 
-
     </div>
+  </article>
+</section>-->
+
+<section class="input-output">
+  <article>
+    <h3>Input/Output</h3>
+    <app-curso [nome]="nomeCurso"></app-curso>
+
+    <contador [valor]= "10" (alterouValor) = "onalterouValor($event)"></contador>
   </article>
 </section>

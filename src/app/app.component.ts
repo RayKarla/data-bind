@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  valor: number = 5;
+  excluir: boolean = false;
+  mudarValor(){
+    this.valor++;
+  }
+
+  delete(){
+    this.excluir = true;
+  }
 }

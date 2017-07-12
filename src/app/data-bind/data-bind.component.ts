@@ -20,6 +20,8 @@ export class DataBindComponent implements OnInit {
     idade:20
   }
 
+  nomeCurso: string = 'Angular2';
+  
 
   getValor() {
     return 1;
@@ -38,6 +40,9 @@ export class DataBindComponent implements OnInit {
   }
   mouseOutAlt() {
     this.ismouseOver = !this.ismouseOver;
+  }
+  onalterouValor(evento){
+    console.log(evento.novoValor);
   }
   constructor() { }
 
